@@ -1,4 +1,4 @@
-alias vup='vagrant up'
+alias vup='vagrant up --provider vmware_fusion'
 alias vs='vagrant ssh'
 alias vhalt='vagrant halt'
 alias vdestroy='vagrant destroy'
