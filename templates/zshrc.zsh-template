@@ -38,10 +38,17 @@ plugins=(git osx ssh-agent sublime)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=./bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/bin
+export PATH=./bin:/usr/texbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/bin
 
 DEFAULT_USER="bilke"
 
 [ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+# added by travis gem
+source /Users/bilke/.travis/travis.sh
+
+# add Node
+[ -f /opt/boxen/nvm/nvm.sh ] && source /opt/boxen/nvm/nvm.sh && nvm use 0.10.5
+eval "$(nodenv init -)"
