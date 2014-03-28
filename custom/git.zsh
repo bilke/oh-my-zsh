@@ -14,3 +14,7 @@ alias gcl='git clean -fdx'
 function git-clean-orig {
     git status -su | grep -e"\.orig$" | cut -f2 -d" " | xargs rm
 }
+
+function createrepo { ssh git@bilke.co git init --bare "$*".git }
+function moverepo { ssh git@bilke.co mv $1.git $2.git }
+function deleterepo { ssh git@bilke.co rm -rf "$*".git }
