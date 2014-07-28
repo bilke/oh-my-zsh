@@ -22,3 +22,14 @@ alias start_apache='boxen --disable-services; boxen --enable-service mysql; sudo
 alias unrar='unrar x'
 
 alias gdb='gdb -tui -q --args'
+
+# PDF optimization
+#alias pdfoptscreen='gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/ebook -dNOPAUSE -dQUIET -dBATCH -sOutputFile=small.pdf big.pdf'
+
+pdfoptscreen() {
+	gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/ebook -dNOPAUSE -dQUIET -dBATCH -sOutputFile="$2" "$1"
+}
+
+pdfoptprint() {
+	gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/prepress -dNOPAUSE -dQUIET -dBATCH -sOutputFile="$2" "$1"
+}
