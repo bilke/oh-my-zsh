@@ -33,3 +33,7 @@ pdfoptscreen() {
 pdfoptprint() {
 	gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/prepress -dNOPAUSE -dQUIET -dBATCH -sOutputFile="$2" "$1"
 }
+
+# open
+alias o='open -a'
+alias f='open -a Finder'
