@@ -1,8 +1,18 @@
+if [ `uname` = "Darwin" ]; then
+	alias size='du -hdl'
+	alias top='top -o cpu'
+	alias ql="qlmanage -p &>/dev/null" # Quicklook
+	alias start_apache='boxen --disable-services; boxen --enable-service mysql; sudo apachectl start'
+
+	# open
+	alias o='open -a'
+	alias f='open -a Finder'
+else
+	alias size='du -sh'
+fi
+
 alias makej='make -j 4'
-alias size='du -hdl'
 alias rsync='rsync -av --progress --stats'
-alias top='top -o cpu'
-alias ql="qlmanage -p &>/dev/null" # Quicklook
 alias psgrep="ps Ao pid,comm|ruby -e 'puts STDIN.read.gsub(/^ *(\d+) .*?([^\/]+?$)/,\"\\\1: \\\2\")'|grep -iE"
 alias eepermissions="sudo chmod 666 exp/expressionengine/config/{config.php,database.php} &&
     sudo chmod -R 777 exp/expressionengine/cache &&
@@ -16,8 +26,6 @@ alias jg='jekyll build'
 alias svndeleterepo='find . -iname ".svn" -print0 | xargs -0 rm -r'
 
 export DOCKER_HOST=tcp://
-
-alias start_apache='boxen --disable-services; boxen --enable-service mysql; sudo apachectl start'
 
 alias unrar='unrar x'
 
@@ -33,7 +41,3 @@ pdfoptscreen() {
 pdfoptprint() {
 	gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/prepress -dNOPAUSE -dQUIET -dBATCH -sOutputFile="$2" "$1"
 }
-
-# open
-alias o='open -a'
-alias f='open -a Finder'
