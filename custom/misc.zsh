@@ -41,3 +41,7 @@ pdfoptscreen() {
 pdfoptprint() {
 	gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/prepress -dNOPAUSE -dQUIET -dBATCH -sOutputFile="$2" "$1"
 }
+
+imageresize() {
+	sips -Z $1 $2
+}
