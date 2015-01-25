@@ -8,4 +8,4 @@ alias vresume='vagrant resume'
 alias vst='vagrant status'
 alias vsuspend='vagrant suspend'
 
-export VAGRANT_HOME=/Volumes/sd/.vagrant.d
+# export VAGRANT_HOME=/Volumes/sd/.vagrant.d # does not work with VMWare

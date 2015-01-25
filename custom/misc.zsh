@@ -25,8 +25,6 @@ alias js='jekyll serve --watch'
 alias jg='jekyll build'
 alias svndeleterepo='find . -iname ".svn" -print0 | xargs -0 rm -r'
 
-export DOCKER_HOST=tcp://
-
 alias unrar='unrar x'
 
 alias gdb='gdb -tui -q --args'
