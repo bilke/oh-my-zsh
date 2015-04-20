@@ -81,3 +81,7 @@ export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH
 
 # added by travis gem
 [ -f /Users/bilke/.travis/travis.sh ] && source /Users/bilke/.travis/travis.sh
+
+
+source ~/.xsh
+
