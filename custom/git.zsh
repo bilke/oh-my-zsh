@@ -10,6 +10,7 @@ alias gr='git remote -v'
 alias grh='git reset --hard HEAD'
 alias gfe='git fetch'
 alias gcl='git clean -fdx'
+alias gsu='git submodule update'
 
 function git-clean-orig {
     git status -su | grep -e"\.orig$" | cut -f2 -d" " | xargs rm
