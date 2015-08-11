@@ -84,4 +84,4 @@ export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH
 
 
 source ~/.xsh
-
+source /usr/local/share/zsh/site-functions/_aws

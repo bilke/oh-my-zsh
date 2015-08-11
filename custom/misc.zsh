@@ -43,3 +43,6 @@ pdfoptprint() {
 imageresize() {
 	sips -Z $1 $2
 }
+
+# itermocil
+alias ws='itermocil --here'
