@@ -7,6 +7,9 @@ if [ `uname` = "Darwin" ]; then
 	# open
 	alias o='open -a'
 	alias f='open -a Finder'
+
+	# find file with Spotlight
+	alias findf='mdfind -onlyin . -name'
 else
 	alias size='du -sh'
 fi
@@ -46,3 +49,9 @@ imageresize() {
 
 # itermocil
 alias ws='itermocil --here'
+
+# Quicklook
+alias ql='qlmanage -p'
+
+# Visual studio code
+code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $*; }
