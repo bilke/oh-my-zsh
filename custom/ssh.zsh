@@ -13,6 +13,7 @@ alias sshal='ssh bilke@141.65.34.13'
 alias sshsarah='ssh sarah@Sarah-MacBook.local'
 alias sshdokku='ssh root@apps.bilke.co'
 alias sshcore='ssh core@visnode14.intranet.ufz.de'
+alias sshvisgit='ssh bilke@visgit.intranet.ufz.de'
 
 alias sshweb='ssh root@bilke.co'
 alias sshgit='ssh git@bilke.co'
